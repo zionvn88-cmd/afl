@@ -1,0 +1,117 @@
+===========================================
+🚀 FIX LỖI 404 LOGO - HƯỚNG DẪN NHANH
+===========================================
+
+📦 File dist.zip đã được tạo tại:
+C:\Users\zion\Documents\GitHub\afl\frontend\dist.zip
+Kích thước: ~1.3 MB
+
+===========================================
+CÁCH 1: UPLOAD QUA aaPanel (DỄ NHẤT)
+===========================================
+
+Bước 1: Mở aaPanel
+   → Login: https://your-server-ip:8888
+
+Bước 2: File Manager
+   → Navigate đến: /www/wwwroot/afl-tracker/frontend/
+
+Bước 3: Upload dist.zip
+   → Click "Upload"
+   → Chọn file: C:\Users\zion\Documents\GitHub\afl\frontend\dist.zip
+   → Đợi upload xong
+
+Bước 4: Extract (Giải nén)
+   → Right-click vào file dist.zip
+   → Chọn "Extract"
+   → Chọn "Overwrite all" (ghi đè tất cả)
+
+Bước 5: Xóa file zip
+   → Delete file dist.zip sau khi giải nén
+
+Bước 6: Kiểm tra
+   → Vào folder: /www/wwwroot/afl-tracker/frontend/dist/logos/
+   → Phải có 3 file:
+     ✓ facebook.png
+     ✓ google.png
+     ✓ tiktok.png
+
+Bước 7: Test
+   → Mở browser
+   → Hard reload: Ctrl + Shift + R
+   → Check: https://dashboard.ji89home.shop
+   → Không còn lỗi 404!
+
+===========================================
+CÁCH 2: UPLOAD QUA FTP (FileZilla)
+===========================================
+
+1. Mở FileZilla
+2. Connect đến server
+3. Remote path: /www/wwwroot/afl-tracker/frontend/
+4. Local path: C:\Users\zion\Documents\GitHub\afl\frontend\
+5. Kéo thả file dist.zip vào server
+6. SSH vào server, chạy:
+   
+   cd /www/wwwroot/afl-tracker/frontend
+   unzip -o dist.zip
+   rm dist.zip
+   chmod -R 755 dist/
+   chown -R www:www dist/
+
+===========================================
+CÁCH 3: CHỈ UPLOAD 3 FILE LOGO (NHANH)
+===========================================
+
+Nếu không muốn upload toàn bộ dist:
+
+1. Mở aaPanel File Manager
+2. Navigate: /www/wwwroot/afl-tracker/frontend/dist/
+3. Tạo folder "logos" (nếu chưa có)
+4. Vào folder logos
+5. Upload 3 file từ:
+   C:\Users\zion\Documents\GitHub\afl\frontend\dist\logos\
+   
+   → facebook.png (161 KB)
+   → google.png (853 KB)
+   → tiktok.png (102 KB)
+
+===========================================
+KIỂM TRA SAU KHI UPLOAD
+===========================================
+
+✓ Test URL trực tiếp:
+  https://dashboard.ji89home.shop/logos/facebook.png
+  https://dashboard.ji89home.shop/logos/google.png
+  https://dashboard.ji89home.shop/logos/tiktok.png
+  
+  → Phải thấy ảnh hiện ra!
+
+✓ Test trang Settings:
+  https://dashboard.ji89home.shop/settings
+  
+  → Logo Facebook, Google, TikTok phải hiển thị
+  → Console không còn lỗi 404
+
+===========================================
+NẾU VẪN BỊ LỖI
+===========================================
+
+SSH vào server, chạy:
+
+# Kiểm tra file tồn tại
+ls -lh /www/wwwroot/afl-tracker/frontend/dist/logos/
+
+# Set quyền đúng
+chmod 755 /www/wwwroot/afl-tracker/frontend/dist/logos
+chmod 644 /www/wwwroot/afl-tracker/frontend/dist/logos/*.png
+chown -R www:www /www/wwwroot/afl-tracker/frontend/dist/logos
+
+# Restart Nginx
+nginx -t
+nginx -s reload
+
+# Kiểm tra log
+tail -f /www/wwwlogs/dashboard.ji89home.shop.error.log
+
+===========================================
