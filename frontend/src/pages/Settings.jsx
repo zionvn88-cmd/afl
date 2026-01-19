@@ -60,13 +60,13 @@ export default function Settings() {
 
   // Process batch data khi load xong
   useEffect(() => {
-    if (batchData['settings']?.success) {
+    if (batchData['settings']?.success && batchData['settings'].data) {
       const settingsData = batchData['settings'].data;
-      setSettings({
-        apiUrl: settingsData.apiUrl || settings.apiUrl,
-        trackerUrl: settingsData.trackerUrl || settings.trackerUrl,
-        postbackUrl: settingsData.postbackUrl || settings.postbackUrl,
-      });
+      setSettings(prev => ({
+        apiUrl: settingsData.apiUrl || prev.apiUrl,
+        trackerUrl: settingsData.trackerUrl || prev.trackerUrl,
+        postbackUrl: settingsData.postbackUrl || prev.postbackUrl,
+      }));
       setTelegramConfig({
         botToken: settingsData.telegramBotToken || '',
         chatId: settingsData.telegramChatId || ''
@@ -888,7 +888,7 @@ export default function Settings() {
           {/* Facebook Ads */}
           <div className="border border-gray-200 dark:border-gray-700 rounded-ios p-4">
             <div className="flex items-center gap-3 mb-3">
-              <img src="/logos/facebook.png" alt="Facebook" className="w-8 h-8 rounded" />
+              <img src="/logos/facebook.png" alt="Facebook" className="w-8 h-8 rounded" onError={(e) => { e.target.src = '/logos/facebook.svg' }} />
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-white">Facebook Ads</h3>
                 <span className="text-xs text-gray-500">Chưa kết nối</span>
@@ -908,7 +908,7 @@ export default function Settings() {
           {/* Google Ads */}
           <div className="border border-gray-200 dark:border-gray-700 rounded-ios p-4">
             <div className="flex items-center gap-3 mb-3">
-              <img src="/logos/google.png" alt="Google" className="w-8 h-8 rounded" />
+              <img src="/logos/google.png" alt="Google" className="w-8 h-8 rounded" onError={(e) => { e.target.src = '/logos/google.svg' }} />
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-white">Google Ads</h3>
                 <span className="text-xs text-gray-500">Chưa kết nối</span>
@@ -928,7 +928,7 @@ export default function Settings() {
           {/* TikTok Ads */}
           <div className="border border-gray-200 dark:border-gray-700 rounded-ios p-4">
             <div className="flex items-center gap-3 mb-3">
-              <img src="/logos/tiktok.png" alt="TikTok" className="w-8 h-8 rounded" />
+              <img src="/logos/tiktok.png" alt="TikTok" className="w-8 h-8 rounded" onError={(e) => { e.target.src = '/logos/tiktok.svg' }} />
               <div>
                 <h3 className="font-medium text-gray-900 dark:text-white">TikTok Ads</h3>
                 <span className="text-xs text-gray-500">Chưa kết nối</span>
