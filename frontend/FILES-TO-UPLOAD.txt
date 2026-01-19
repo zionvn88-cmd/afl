@@ -1,0 +1,110 @@
+===========================================
+DANH SÁCH FILES CẦN UPLOAD LÊN HOSTING
+===========================================
+
+Đường dẫn gốc: /www/wwwroot/afl-tracker/frontend/
+
+===========================================
+1. TẠO THƯ MỤC MỚI
+===========================================
+Tạo thư mục: src/contexts/
+
+===========================================
+2. CONTEXTS (Files mới - 1 file)
+===========================================
+src/contexts/ThemeContext.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/contexts/ThemeContext.jsx
+
+===========================================
+3. COMPONENTS (Files mới - 4 files)
+===========================================
+src/components/EnhancedStatCard.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/EnhancedStatCard.jsx
+
+src/components/PerformanceChart.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/PerformanceChart.jsx
+
+src/components/Modal.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/Modal.jsx
+
+src/components/ThemeToggle.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/ThemeToggle.jsx
+
+===========================================
+4. PAGES (Files mới - 6 files)
+===========================================
+src/pages/CampaignDetail.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/CampaignDetail.jsx
+
+src/pages/Offers.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Offers.jsx
+
+src/pages/OfferForm.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/OfferForm.jsx
+
+src/pages/TrafficSources.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/TrafficSources.jsx
+
+src/pages/Reports.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Reports.jsx
+
+src/pages/Conversions.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Conversions.jsx
+
+===========================================
+5. FILES ĐÃ CẬP NHẬT (Thay thế file cũ - 10 files)
+===========================================
+tailwind.config.js
+→ /www/wwwroot/afl-tracker/frontend/tailwind.config.js
+
+src/index.css
+→ /www/wwwroot/afl-tracker/frontend/src/index.css
+
+src/main.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/main.jsx
+
+src/App.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/App.jsx
+
+src/components/Layout.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/Layout.jsx
+
+src/pages/Dashboard.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Dashboard.jsx
+
+src/pages/Campaigns.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Campaigns.jsx
+
+src/pages/CampaignForm.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/CampaignForm.jsx
+
+src/services/api.js
+→ /www/wwwroot/afl-tracker/frontend/src/services/api.js
+
+package.json
+→ /www/wwwroot/afl-tracker/frontend/package.json
+
+===========================================
+TỔNG CỘNG: 21 FILES
+- Files mới: 11 files
+- Files cập nhật: 10 files
+===========================================
+
+===========================================
+SAU KHI UPLOAD XONG:
+===========================================
+
+1. SSH vào server:
+   cd /www/wwwroot/afl-tracker/frontend
+
+2. Cài đặt framer-motion:
+   npm install framer-motion
+
+3. Rebuild frontend:
+   npm run build
+
+4. Kiểm tra:
+   ls -la src/contexts/ThemeContext.jsx
+   ls -la src/components/EnhancedStatCard.jsx
+
+===========================================

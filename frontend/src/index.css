@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+  
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 { @apply text-4xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+  h5 { @apply text-lg; }
+  h6 { @apply text-base; }
+}
+
+@layer components {
+  /* iOS-style card */
+  .card-ios {
+    @apply bg-white dark:bg-gray-800 rounded-ios-lg shadow-ios border border-gray-100 dark:border-gray-700;
+  }
+  
+  /* iOS-style button */
+  .btn-ios {
+    @apply px-4 py-2.5 rounded-ios font-medium text-sm transition-all duration-200 active:scale-95;
+  }
+  
+  .btn-ios-primary {
+    @apply btn-ios bg-blue-500 hover:bg-blue-600 text-white shadow-sm;
+  }
+  
+  .btn-ios-secondary {
+    @apply btn-ios bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100;
+  }
+  
+  /* Legacy classes for compatibility */
+  .btn-primary {
+    @apply btn-ios-primary;
+  }
+  
+  .btn-secondary {
+    @apply btn-ios-secondary;
+  }
+  
+  .card {
+    @apply card-ios;
+  }
+  
+  .input {
+    @apply px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-ios bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+}
+
+code {
+  font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  @apply text-sm bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded;
+}

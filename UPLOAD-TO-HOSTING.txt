@@ -1,0 +1,217 @@
+===========================================
+DANH SÁCH FILE CẦN UPLOAD LÊN HOSTING
+===========================================
+
+Ngày tạo: $(date)
+Tổng số file: 30 files
+
+===========================================
+📁 FRONTEND FILES (24 files)
+===========================================
+
+Đường dẫn gốc: /www/wwwroot/afl-tracker/frontend/
+
+--- 1. TẠO THƯ MỤC MỚI ---
+mkdir -p src/config/
+mkdir -p src/hooks/
+
+--- 2. CONFIG & HOOKS (4 files mới) ---
+✅ src/config/api.js
+   → /www/wwwroot/afl-tracker/frontend/src/config/api.js
+
+✅ src/config/networks.js
+   → /www/wwwroot/afl-tracker/frontend/src/config/networks.js
+
+✅ src/hooks/useAPI.js
+   → /www/wwwroot/afl-tracker/frontend/src/hooks/useAPI.js
+
+✅ src/hooks/useDebounce.js
+   → /www/wwwroot/afl-tracker/frontend/src/hooks/useDebounce.js
+
+--- 3. COMPONENTS (4 files mới) ---
+✅ src/components/CostComparisonCard.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/CostComparisonCard.jsx
+
+✅ src/components/InteractiveTable.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/InteractiveTable.jsx
+
+✅ src/components/OfferModal.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/OfferModal.jsx
+
+✅ src/components/TrafficSourceIcon.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/TrafficSourceIcon.jsx
+
+--- 4. COMPONENTS (3 files cập nhật) ---
+✅ src/components/Layout.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/Layout.jsx
+
+✅ src/components/EnhancedStatCard.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/EnhancedStatCard.jsx
+
+✅ src/components/Modal.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/Modal.jsx
+
+--- 5. PAGES (9 files mới) ---
+✅ src/pages/EnhancedDashboard.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/EnhancedDashboard.jsx
+
+✅ src/pages/EnhancedCampaigns.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/EnhancedCampaigns.jsx
+
+✅ src/pages/CampaignCreate.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/CampaignCreate.jsx
+
+✅ src/pages/CampaignEdit.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/CampaignEdit.jsx
+
+✅ src/pages/Settings.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/Settings.jsx
+
+✅ src/pages/Alerts.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/Alerts.jsx
+
+✅ src/pages/LandingPages.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/LandingPages.jsx
+
+✅ src/pages/CustomDomains.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/CustomDomains.jsx
+
+✅ src/pages/FraudDashboard.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/FraudDashboard.jsx
+
+--- 6. PAGES (4 files cập nhật) ---
+✅ src/pages/CampaignDetail.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/CampaignDetail.jsx
+
+✅ src/pages/Reports.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/Reports.jsx
+
+✅ src/pages/Conversions.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/Conversions.jsx
+
+✅ src/pages/TrafficSources.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/pages/TrafficSources.jsx
+
+--- 7. ROOT FILES (4 files cập nhật) ---
+✅ src/main.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/main.jsx
+
+✅ src/App.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/App.jsx
+
+✅ package.json
+   → /www/wwwroot/afl-tracker/frontend/package.json
+
+✅ index.html
+   → /www/wwwroot/afl-tracker/frontend/index.html
+
+===========================================
+📁 BACKEND FILES (6 files)
+===========================================
+
+⚠️ LƯU Ý: Backend KHÔNG có thư mục riêng "backend"
+Đường dẫn gốc: /www/wwwroot/afl-tracker/ (cùng cấp với frontend)
+
+--- 1. ROUTES (5 files mới) ---
+✅ src/services/api/routes/landingPages.js
+   → /www/wwwroot/afl-tracker/src/services/api/routes/landingPages.js
+
+✅ src/services/api/routes/customDomains.js
+   → /www/wwwroot/afl-tracker/src/services/api/routes/customDomains.js
+
+✅ src/services/api/routes/alerts.js
+   → /www/wwwroot/afl-tracker/src/services/api/routes/alerts.js
+
+✅ src/services/api/routes/conversions.js
+   → /www/wwwroot/afl-tracker/src/services/api/routes/conversions.js
+
+✅ src/services/api/routes/settings.js
+   → /www/wwwroot/afl-tracker/src/services/api/routes/settings.js
+
+--- 2. API INDEX (1 file cập nhật) ---
+✅ src/services/api/index.js
+   → /www/wwwroot/afl-tracker/src/services/api/index.js
+
+--- 3. TRAFFIC SOURCES (1 file cập nhật) ---
+✅ src/services/api/routes/trafficSources.js
+   → /www/wwwroot/afl-tracker/src/services/api/routes/trafficSources.js
+   (ĐÃ THÊM POST, PUT, DELETE routes)
+
+===========================================
+📋 TỔNG KẾT
+===========================================
+
+FRONTEND:
+- Files mới: 17 files
+- Files cập nhật: 7 files
+- Tổng: 24 files
+
+BACKEND:
+- Files mới: 5 files
+- Files cập nhật: 2 files (index.js, trafficSources.js)
+- Tổng: 7 files
+
+TỔNG CỘNG: 31 files
+
+===========================================
+🚀 HƯỚNG DẪN UPLOAD
+===========================================
+
+1. FRONTEND:
+   cd /www/wwwroot/afl-tracker/frontend
+   
+   # Tạo thư mục mới
+   mkdir -p src/config src/hooks
+   
+   # Upload tất cả files frontend
+   # (Sử dụng FTP/SFTP hoặc scp)
+   
+   # Sau khi upload xong:
+   npm install
+   npm run build
+
+2. BACKEND:
+   cd /www/wwwroot/afl-tracker
+   
+   # Upload tất cả files backend vào src/services/api/routes/
+   # (Sử dụng FTP/SFTP hoặc scp)
+   
+   # Sau khi upload xong:
+   # ⚠️ LƯU Ý: PM2 process name là "afl-api" chứ KHÔNG phải "api"
+   pm2 restart afl-api
+   
+   # Hoặc restart tất cả services
+   pm2 restart all
+   
+   # Kiểm tra logs
+   pm2 logs afl-api --lines 20
+
+===========================================
+✅ KIỂM TRA SAU KHI UPLOAD
+===========================================
+
+1. Kiểm tra frontend:
+   - Mở browser DevTools Console
+   - Không còn lỗi 404
+   - Các pages mới load được
+
+2. Kiểm tra backend:
+   curl https://api.j189home.shop/api/landing-pages
+   curl https://api.j189home.shop/api/custom-domains
+   curl https://api.j189home.shop/api/alerts
+   curl https://api.j189home.shop/api/conversions
+   curl https://api.j189home.shop/api/settings
+
+3. Kiểm tra API health:
+   curl https://api.j189home.shop/health
+
+===========================================
+📝 LƯU Ý
+===========================================
+
+- Đảm bảo upload đúng đường dẫn
+- Kiểm tra quyền truy cập file (chmod 644)
+- Restart services sau khi upload
+- Kiểm tra logs nếu có lỗi
+
+===========================================

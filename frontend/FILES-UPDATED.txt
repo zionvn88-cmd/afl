@@ -1,0 +1,74 @@
+# DANH SÁCH FILE ĐÃ ĐƯỢC ĐỒNG BỘ TỪ AFT SANG SELF-HOSTING
+# Ngày cập nhật: $(date)
+
+## 📁 CẤU TRÚC THƯ MỤC MỚI
+src/config/
+src/hooks/
+
+## 📄 FILE CẤU HÌNH
+package.json
+index.html
+src/main.jsx
+src/App.jsx
+
+## 📄 FILE CONFIG & HOOKS
+src/config/api.js (MỚI)
+src/config/networks.js (MỚI)
+src/hooks/useAPI.js (MỚI)
+src/hooks/useDebounce.js (MỚI)
+
+## 📄 COMPONENTS
+src/components/Layout.jsx (ĐÃ CẬP NHẬT)
+src/components/EnhancedStatCard.jsx (ĐÃ CẬP NHẬT)
+src/components/Modal.jsx (ĐÃ CẬP NHẬT)
+src/components/CostComparisonCard.jsx (MỚI)
+src/components/InteractiveTable.jsx (MỚI)
+src/components/OfferModal.jsx (MỚI)
+src/components/TrafficSourceIcon.jsx (MỚI)
+
+## 📄 PAGES
+src/pages/EnhancedDashboard.jsx (MỚI)
+src/pages/EnhancedCampaigns.jsx (MỚI)
+src/pages/CampaignCreate.jsx (MỚI)
+src/pages/CampaignEdit.jsx (MỚI)
+src/pages/CampaignDetail.jsx (ĐÃ CẬP NHẬT)
+src/pages/Settings.jsx (MỚI)
+src/pages/Alerts.jsx (MỚI)
+src/pages/LandingPages.jsx (MỚI)
+src/pages/CustomDomains.jsx (MỚI)
+src/pages/FraudDashboard.jsx (MỚI)
+src/pages/Reports.jsx (ĐÃ CẬP NHẬT)
+src/pages/Conversions.jsx (ĐÃ CẬP NHẬT)
+src/pages/TrafficSources.jsx (ĐÃ CẬP NHẬT)
+
+## 📄 CONTEXTS (KHÔNG THAY ĐỔI)
+src/contexts/ThemeContext.jsx (GIỐNG NHAU)
+
+## 📄 STYLES (KHÔNG THAY ĐỔI)
+src/index.css (GIỐNG NHAU, CÓ THÊM LEGACY CLASSES)
+
+## 📄 CONFIG FILES (KHÔNG THAY ĐỔI)
+tailwind.config.js (GIỐNG NHAU)
+postcss.config.js (GIỐNG NHAU)
+vite.config.js (GIỮ NGUYÊN - PROXY TARGET KHÁC CHO SELF-HOSTING)
+
+## ⚠️ FILE KHÔNG ĐƯỢC SỬ DỤNG (CÓ THỂ XÓA)
+src/pages/Dashboard.jsx (KHÔNG DÙNG - DÙNG EnhancedDashboard)
+src/pages/Campaigns.jsx (KHÔNG DÙNG - DÙNG EnhancedCampaigns)
+src/pages/CampaignForm.jsx (KHÔNG DÙNG - DÙNG CampaignCreate/CampaignEdit)
+src/pages/Offers.jsx (KHÔNG DÙNG)
+src/pages/OfferForm.jsx (KHÔNG DÙNG)
+src/components/StatCard.jsx (KHÔNG DÙNG - DÙNG EnhancedStatCard)
+src/components/Table.jsx (KHÔNG DÙNG - DÙNG InteractiveTable)
+
+## 📋 TỔNG KẾT
+- File mới: 11 files
+- File đã cập nhật: 7 files
+- File giữ nguyên: 5 files
+- File không dùng: 7 files (có thể xóa)
+
+## 🚀 BƯỚC TIẾP THEO
+1. Chạy: npm install (để cài dependencies mới)
+2. Chạy: npm run build (để build project)
+3. Upload tất cả file trong src/ lên server
+4. Upload package.json và các file config lên server

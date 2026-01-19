@@ -1,0 +1,69 @@
+===========================================
+DANH SÁCH FILE CẦN UPLOAD - ĐƠN GIẢN
+===========================================
+
+FRONTEND (24 files)
+===================
+
+MỚI (17 files):
+src/config/api.js
+src/config/networks.js
+src/hooks/useAPI.js
+src/hooks/useDebounce.js
+src/components/CostComparisonCard.jsx
+src/components/InteractiveTable.jsx
+src/components/OfferModal.jsx
+src/components/TrafficSourceIcon.jsx
+src/pages/EnhancedDashboard.jsx
+src/pages/EnhancedCampaigns.jsx
+src/pages/CampaignCreate.jsx
+src/pages/CampaignEdit.jsx
+src/pages/Settings.jsx
+src/pages/Alerts.jsx
+src/pages/LandingPages.jsx
+src/pages/CustomDomains.jsx
+src/pages/FraudDashboard.jsx
+
+CẬP NHẬT (7 files):
+src/components/Layout.jsx
+src/components/EnhancedStatCard.jsx
+src/components/Modal.jsx
+src/pages/CampaignDetail.jsx
+src/pages/Reports.jsx
+src/pages/Conversions.jsx
+src/pages/TrafficSources.jsx
+src/main.jsx
+src/App.jsx
+package.json
+index.html
+
+BACKEND (6 files)
+=================
+
+MỚI (5 files):
+src/services/api/routes/landingPages.js
+src/services/api/routes/customDomains.js
+src/services/api/routes/alerts.js
+src/services/api/routes/conversions.js
+src/services/api/routes/settings.js
+
+CẬP NHẬT (1 file):
+src/services/api/index.js
+
+===========================================
+SAU KHI UPLOAD
+===========================================
+
+FRONTEND:
+cd /www/wwwroot/afl-tracker/frontend
+mkdir -p src/config src/hooks
+npm install
+npm run build
+
+BACKEND:
+cd /www/wwwroot/afl-tracker
+# ⚠️ LƯU Ý: PM2 process name là "afl-api" chứ KHÔNG phải "api"
+pm2 restart afl-api
+# Hoặc: pm2 restart all
+
+===========================================

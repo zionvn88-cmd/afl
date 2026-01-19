@@ -1,0 +1,58 @@
+{
+  "name": "afl-tracker-selfhosting",
+  "version": "3.0.0",
+  "description": "AFL Tracker Self-Hosting - Hệ thống tracking affiliate cho aaPanel",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "tracker": "node src/services/tracker/index.js",
+    "api": "node src/services/api/index.js",
+    "postback": "node src/services/postback/index.js",
+    "worker": "node src/services/worker/index.js",
+    "db:init": "node scripts/init-database.js",
+    "db:migrate": "node scripts/migrate.js",
+    "db:seed": "node scripts/seed.js",
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs",
+    "pm2:logs": "pm2 logs"
+  },
+  "keywords": [
+    "affiliate",
+    "tracker",
+    "binom",
+    "voluum",
+    "self-hosting"
+  ],
+  "author": "AFL Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "redis": "^4.6.11",
+    "bull": "^4.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "ua-parser-js": "^1.0.37",
+    "geoip-lite": "^1.4.7",
+    "axios": "^1.6.2",
+    "date-fns": "^3.0.0",
+    "nanoid": "^5.0.4",
+    "node-cron": "^3.0.3",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

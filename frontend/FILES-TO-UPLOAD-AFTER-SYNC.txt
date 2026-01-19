@@ -1,0 +1,169 @@
+===========================================
+DANH SÁCH FILES CẦN UPLOAD SAU KHI ĐỒNG BỘ
+===========================================
+
+Đường dẫn gốc: /www/wwwroot/afl-tracker/frontend/
+
+===========================================
+1. TẠO THƯ MỤC MỚI
+===========================================
+mkdir -p src/config/
+mkdir -p src/hooks/
+
+===========================================
+2. CONFIG & HOOKS (Files mới - 4 files)
+===========================================
+src/config/api.js
+→ /www/wwwroot/afl-tracker/frontend/src/config/api.js
+
+src/config/networks.js
+→ /www/wwwroot/afl-tracker/frontend/src/config/networks.js
+
+src/hooks/useAPI.js
+→ /www/wwwroot/afl-tracker/frontend/src/hooks/useAPI.js
+
+src/hooks/useDebounce.js
+→ /www/wwwroot/afl-tracker/frontend/src/hooks/useDebounce.js
+
+===========================================
+3. COMPONENTS (Files mới - 4 files)
+===========================================
+src/components/CostComparisonCard.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/CostComparisonCard.jsx
+
+src/components/InteractiveTable.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/InteractiveTable.jsx
+
+src/components/OfferModal.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/OfferModal.jsx
+
+src/components/TrafficSourceIcon.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/TrafficSourceIcon.jsx
+
+===========================================
+4. COMPONENTS (Files đã cập nhật - 3 files)
+===========================================
+src/components/Layout.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/Layout.jsx
+
+src/components/EnhancedStatCard.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/EnhancedStatCard.jsx
+
+src/components/Modal.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/Modal.jsx
+
+===========================================
+5. PAGES (Files mới - 9 files)
+===========================================
+src/pages/EnhancedDashboard.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/EnhancedDashboard.jsx
+
+src/pages/EnhancedCampaigns.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/EnhancedCampaigns.jsx
+
+src/pages/CampaignCreate.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/CampaignCreate.jsx
+
+src/pages/CampaignEdit.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/CampaignEdit.jsx
+
+src/pages/Settings.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Settings.jsx
+
+src/pages/Alerts.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Alerts.jsx
+
+src/pages/LandingPages.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/LandingPages.jsx
+
+src/pages/CustomDomains.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/CustomDomains.jsx
+
+src/pages/FraudDashboard.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/FraudDashboard.jsx
+
+===========================================
+6. PAGES (Files đã cập nhật - 4 files)
+===========================================
+src/pages/CampaignDetail.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/CampaignDetail.jsx
+
+src/pages/Reports.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Reports.jsx
+
+src/pages/Conversions.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/Conversions.jsx
+
+src/pages/TrafficSources.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/pages/TrafficSources.jsx
+
+===========================================
+7. ROOT FILES (Files đã cập nhật - 3 files)
+===========================================
+src/main.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/main.jsx
+
+src/App.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/App.jsx
+
+package.json
+→ /www/wwwroot/afl-tracker/frontend/package.json
+
+index.html
+→ /www/wwwroot/afl-tracker/frontend/index.html
+
+===========================================
+7. COMPONENTS (Files đã cập nhật - 1 file)
+===========================================
+src/components/TrafficSourceIcon.jsx
+→ /www/wwwroot/afl-tracker/frontend/src/components/TrafficSourceIcon.jsx
+(LƯU Ý: Không cần logo files nữa, dùng emoji)
+
+===========================================
+TỔNG CỘNG: 24 FILES
+- Files mới: 17 files
+- Files cập nhật: 7 files
+===========================================
+
+===========================================
+⚠️ BACKEND FILES CẦN CẬP NHẬT (6 files)
+===========================================
+src/services/api/routes/landingPages.js (MỚI)
+src/services/api/routes/customDomains.js (MỚI)
+src/services/api/routes/alerts.js (MỚI)
+src/services/api/routes/conversions.js (MỚI)
+src/services/api/routes/settings.js (MỚI)
+src/services/api/index.js (ĐÃ CẬP NHẬT)
+
+→ Upload lên server và restart API service
+→ Xem chi tiết trong FIX-404-ERRORS.md
+
+===========================================
+
+===========================================
+SAU KHI UPLOAD XONG:
+===========================================
+
+1. SSH vào server:
+   cd /www/wwwroot/afl-tracker/frontend
+
+2. Cài đặt dependencies mới:
+   npm install
+
+3. Rebuild frontend:
+   npm run build
+
+4. Kiểm tra các file mới:
+   ls -la src/config/
+   ls -la src/hooks/
+   ls -la src/pages/EnhancedDashboard.jsx
+   ls -la src/pages/EnhancedCampaigns.jsx
+
+===========================================
+LƯU Ý:
+===========================================
+- Tất cả các file đã được đồng bộ với aft/frontend
+- Các file cũ như Dashboard.jsx, Campaigns.jsx vẫn tồn tại nhưng không được sử dụng
+- Có thể xóa các file không dùng sau khi kiểm tra mọi thứ hoạt động tốt
+
+===========================================

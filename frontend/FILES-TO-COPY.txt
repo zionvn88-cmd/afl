@@ -1,0 +1,54 @@
+===========================================
+DANH SÁCH FILES CẦN COPY LÊN SERVER
+===========================================
+
+Đường dẫn gốc: /www/wwwroot/afl-tracker/frontend/
+
+1. TẠO THƯ MỤC MỚI:
+   /www/wwwroot/afl-tracker/frontend/src/contexts/
+
+2. CONTEXTS:
+   src/contexts/ThemeContext.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/contexts/ThemeContext.jsx
+
+3. COMPONENTS MỚI:
+   src/components/EnhancedStatCard.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/EnhancedStatCard.jsx
+
+   src/components/PerformanceChart.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/PerformanceChart.jsx
+
+   src/components/Modal.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/Modal.jsx
+
+   src/components/ThemeToggle.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/ThemeToggle.jsx
+
+4. FILES ĐÃ CẬP NHẬT:
+   tailwind.config.js
+   → /www/wwwroot/afl-tracker/frontend/tailwind.config.js
+
+   src/index.css
+   → /www/wwwroot/afl-tracker/frontend/src/index.css
+
+   src/main.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/main.jsx
+
+   src/App.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/App.jsx
+
+   src/components/Layout.jsx
+   → /www/wwwroot/afl-tracker/frontend/src/components/Layout.jsx
+
+   package.json
+   → /www/wwwroot/afl-tracker/frontend/package.json
+
+===========================================
+SAU KHI COPY:
+===========================================
+
+1. cd /www/wwwroot/afl-tracker/frontend
+2. npm install framer-motion
+3. npm run build
+
+===========================================
